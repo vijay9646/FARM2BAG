@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oil and Ghee</title>
+    <link rel="icon" type="image/x-icon" href="images/backgrounds/LOGO1.png">
+
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--fa fa i con cdn link-->
+
+
+    <link rel="stylesheet" href="css/navebar.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background-color: aliceblue;
+        }
+
+        #slid{
+            margin-top: 6%;
+        }
+
+        #slidd{
+          margin-top: 1%;
+          font-size: 50px;
+          font-weight: 700;
+          margin-left: 41%;
+          color: rgb(255, 38, 0);
+        }
+
+
+        #slid{
+          font-size: 50px;
+          font-weight: 700;
+          margin-left: 21%;
+          color: rgb(6, 164, 3);
+        }
+
+        .grid-container {
+            margin-top: 3%;
+            justify-items: center;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .grid-item {
+            background-color: white;
+            border: 0.1px solid rgb(213, 210, 213);
+            padding: 10px;
+            text-align: center;
+            height: 43vh;
+            width: 20vw;
+        }
+
+        .grid-item img{
+            width: 11vw;
+            height: 20vh;
+        }
+
+        #furitsimage{
+            border-radius: 15px;
+            margin-left: 10%;
+        }
+
+        #price{
+            font-weight: 600;
+        }
+
+        .grid-item p strike{
+            margin-right: 10px;
+            font-weight: 500;
+        }
+
+        .grid-item a{
+            font-size: large;
+            margin-right: 10%;
+            text-decoration: none;
+        }
+
+        #shoping{
+            margin-left: 60%;
+            width: 20px;
+            height: 20px;
+            margin-top: 3%;
+            margin-bottom: -5PX;
+        }
+
+        .grid-item {
+            border-radius: 50px;
+        }
+
+        .grid-item:hover{
+            border-color: fuchsia;
+            background-color: aquamarine;
+            box-shadow: 4px;
+            zoom: 102%;
+            margin-top: -2%;
+            box-shadow: 5px 6px 20px 1px rgba(0, 0, 0, 0.4);
+        }
+
+
+
+
+        /* Media Query for smaller screens */
+
+    @media screen and (max-width: 1300px) {
+        .grid-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-item{
+            width: 25vw;
+            height: auto;
+        }
+
+        .grid-item img{
+            width: 15vw;
+            height: 20vh;
+        }
+}
+
+
+    @media screen and (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-item{
+            width: 36vw;
+            height: auto;
+        }
+
+        .grid-item img{
+            width: 20vw;
+            height: 20vh;
+        }
+}
+
+
+
+        /*footer tag css start*/
+
+        .foot{
+            margin-top: 3%;
+            width: 100vw;
+            height: 48vh;
+            background-color: black;
+            color: white;
+        }
+
+        .grid-container4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 20px;
+            background-color: black;
+            height: 33vh;
+        }
+
+        .grid-item4 {
+            background-color: black;
+            padding: 20px;
+            height: 30vh;
+
+        }
+
+        #adressclass{
+            padding-left: 90px;
+        }
+
+        #fo{
+            color: white;
+            padding-left: 0;
+            padding-right: 0;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .grid-item4 h1{
+            color: #2ef71c;
+        }
+
+        .grid-item4 h1 span{
+            color: #f36e31;
+        }
+
+        .grid-item4 h2{
+            color: white;
+        }
+
+        #weblink,i{
+            color: white;
+        }
+
+        #ad{
+            text-decoration: none;
+            line-height: 2;
+            color: white;
+        }
+
+        .grid-item4 i{
+            margin-right: 3%;
+        }
+
+        #orgimgs{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        #companyname{
+            margin-right: -20px;
+            float: right;
+        }
+
+        /*last sign up from css*/
+
+        #input-label {
+            display: flex;
+            align-items: center;
+            
+        }
+
+        #user-input {
+            height: 35px;
+            width: 250px;
+            border: 2px solid #07f503;
+            border-radius: 4px;
+        }
+
+        #signup-button {
+            text-wrap: nowrap;
+            padding:12px 30px;
+            background-color: #4caf50;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-size: 13px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+
+
+
+
+
+
+
+    </style>
+    <title>Grid Layout Example</title>
+</head>
+<body>
+<!--nave bar div start-->
+    <div class="navbar">
+        <img src="/images/backgrounds/LOGO1.png" alt="Your Logo" id="orgimg">
+        <a href="" id="nava"> FARMER SHOP </a>
+        <a id="na" href="#about"><i class="fi fi-sr-phone-call"></i>Contact</a>
+        <a id="na" href="#home"><i class="fi fi-sr-shopping-cart"></i>Orders</a>
+        <a id="na" href="shop.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Shop</a>
+        <a id="na" href="home.html"><i class="fi fi-sr-home"></i>Home</a>
+        <div class="search-container">
+            <form action="/search" method="get">
+                <input type="text" placeholder="Search..." name="search">
+            </form>
+        </div><!--search container calss end-->
+    </div><!--nave bar class end div-->
+
+    <div><marquee id="slid" behavior="slide" direction="left" scrollamount="100"><span>Enjoy a healthy</span> and delicious lifestyle </marquee></div>
+    <div><marquee id="slidd" behavior="slide" direction="left" scrollamount="78">Oil & Ghee</marquee></div>
+
+
+
+    <!--grid box container start-->
+    <div class="grid-container">
+        <div class="grid-item">
+            <a href=""><img src="images/oil ghee/almond oli.jpg" id="furitsimage"></a>
+            <h2 id="furitsnames">Almond Oil</h2>
+            <p>Semi Organic</p>
+            <p id="price"><strike>₹60.00</strike>₹55</p>
+            <a href="">1 KG<img id="shoping" src="images/backgrounds/shopping-cart.png"></a>
+        </div>
+
+        <div class="grid-item">
+            <a href=""><img src="images/oil ghee/buffalo ghee.jpeg" id="furitsimage"></a>
+            <h2>Buffalo Ghee</h2>
+            <p>Semi Organic</p>
+            <p id="price"><strike>₹60.00</strike>₹55</p>
+            <a href="">1 KG<img id="shoping" src="images/backgrounds/shopping-cart.png"></a>
+        </div>
+        <div class="grid-item">
+            <a href=""><img src="images/oil ghee/castor oil.jpg" id="furitsimage"></a>
+            <h2>Castor Oil</h2>
+            <p>Semi Organic</p>
+            <p id="price"><strike>₹60.00</strike>₹55</p>
+            <a href="">1 KG<img id="shoping" src="images/backgrounds/shopping-cart.png"></a>
+
+        </div>
+        <div class="grid-item">
+            <a href=""><img src="images/oil ghee/coconunt oil.jpg" id="furitsimage"></a>
+            <h2>Coconunt Oil</h2>
+            <p>Semi Organic</p>
+            <p id="price"><strike>₹60.00</strike>₹55</p>
+            <a href="">1 KG<img id="shoping" src="images/backgrounds/shopping-cart.png"></a>
+
+        </div>
+        <div class="grid-item">
+            <a href=""><img src="images/oil ghee/cow ghee.jpg" id="furitsimage"></a>
+            <h2>Cow Ghee</h2>
+            <p>Semi Organic</p>
+            <p id="price"><strike>₹60.00</strike>₹55</p>
+            <a href="">1 KG<img id="shoping" src="images/backgrounds/shopping-cart.png"></a>
+
+        </div>
+        <div class="grid-item">
+            <a href=""><img src="images/oil ghee/Gingily oil.png" id="furitsimage"></a>
+            <h2>Gingily Oil</h2>
+            <p>Semi Organic</p>
+            <p id="price"><strike>₹60.00</strike>₹55</p>
+            <a href="">1 KG<img id="shoping" src="images/backgrounds/shopping-cart.png"></a>
+
+        </div>
+        <div class="grid-item">
+            <a href=""><img src="images/oil ghee/groundnut oil.jpg" id="furitsimage"></a>
+            <h2>Groundnut Oil</h2>
+            <p>Semi Organic</p>
+            <p id="price"><strike>₹60.00</strike>₹55</p>
+            <a href="">1 KG<img id="shoping" src="images/backgrounds/shopping-cart.png"></a>
+
+        </div>
+        <div class="grid-item">
+            <a href=""><img src="images/oil ghee/neem oil.jpeg" id="furitsimage"></a>
+            <h2>Neem Oil</h2>
+            <p>Semi Organic</p>
+            <p id="price"><strike>₹60.00</strike>₹55</p>
+            <a href="">1 KG<img id="shoping" src="images/backgrounds/shopping-cart.png"></a>
+
+        </div><!--grid item end-->
+    </div><!--grid container class div end-->
+
+
+    <footer class="foot">
+        <div class="grid-container4">
+            <div class="grid-item4">
+                <img src="/images/backgrounds/LOGO1.png" alt="Your Logo" id="orgimgs">
+                <h1 id="companyname">FA<span>RM</span>ER S<span>HO</span>P</h1>
+                <p id="fo">Get your fruits, vegetables and herbsbr <br> at the  best Farmer Shop in <br>Coimbatore</p>
+                <p id="fo">If the Farmer is rich, then so is the Nation.</p>
+                <a href="" id="weblink"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                <a href="" id="weblink"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a href="" id="weblink"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="" id="weblink"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                <a href="" id="weblink"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="grid-item4" id="adressclass">
+                <h2>Address</h2>
+                <a href="" id="ad"><i class="fa fa-globe" aria-hidden="true"></i>34/2, Hoops, Coimbatore, India</a><br>
+                <a href="" id="ad"><i class="fa fa-phone" aria-hidden="true"></i>+91 9875684628</a><br>
+                <a href="" id="ad"><i class="fa fa-envelope" aria-hidden="true"></i>formershop@gmail.com</a>
+            </div>
+            <div class="grid-item4" id="adressclass">
+                <h2>Quick Links</h2>
+                <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>About Us</a><br>
+                <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Contact Us</a><br>
+                <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Our Services</a><br>
+                <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Terms & Condition</a><br>
+                <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Support</a>
+            </div>
+            <div class="grid-item4">
+                <h2>News Letter</h2>
+                <p id="fo">Plese sing in and and enter your details</p>
+                <form id="signup-form">
+                    <label id="input-label">
+                      <input type="email" id="user-input" placeholder="Enter your email">
+                      <button type="submit" id="signup-button">Sign Up</button>
+                    </label>
+                  </form>
+            </div>
+        </div>
+        <hr style="color: white;">
+        <p><span style="float: left; font-size: 25px;">From Shop</span><span style="float: right;"> Copyright 1999-2023 by Refsnes Data. All Rights Reserved.</span></p><br><hr style="margin-top: 20px;">
+    </footer>
+    
+
+    <!-- Add this script at the end of your HTML body -->
+
+<!-- Add this script at the end of your HTML body -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.querySelector('input[name="search"]');
+        const gridItems = document.querySelectorAll('.grid-item');
+
+        searchInput.addEventListener('input', function () {
+            const searchTerm = searchInput.value.toLowerCase();
+
+            gridItems.forEach(function (item) {
+                const fruitName = item.querySelector('h2').innerText.toLowerCase();
+
+                if (fruitName.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+
+
+</body>
+</html>
+

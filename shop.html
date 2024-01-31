@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoping</title>
+    <link rel="icon" type="image/x-icon" href="images/backgrounds/LOGO1.png">
+
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/navebar.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background-color: aliceblue;
+        }
+
+        #slid{
+            margin-top: 6%;
+        }
+
+
+        #slid{
+          font-size: 50px;
+          font-weight: 700;
+          margin-left: 20%;
+          color: rgb(6, 164, 3);
+        }
+
+        .grid-container {
+            margin-top: 3%;
+            justify-items: center;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .grid-item {
+            background-color: white;
+            border: 0.1px solid rgb(210, 209, 210);
+            padding: 25px;
+            text-align: center;
+            height: 40vh;
+            width: 20vw;
+        }
+
+        .grid-item img{
+            margin-left: 20px;
+            width: 15vw;
+            height: 20vh;
+
+        }
+
+        #furitsimage{
+            border-radius: 15px;
+        }
+
+        #price{
+            font-weight: 600;
+        }
+
+        .grid-item p strike{
+            margin-right: 10px;
+            font-weight: 500;
+        }
+
+        .grid-item a{
+            font-size: large;
+            margin-right: 10%;
+            text-decoration: none;
+        }
+
+        #shoping{
+            margin-left: 60%;
+            width: 20px;
+            height: 20px;
+            margin-top: 3%;
+            margin-bottom: -5PX;
+        }
+
+        .grid-item {
+            border-radius: 50px;
+        }
+
+        .grid-item:hover{
+            width: 19vw;
+            height: 39vh;
+            border-color: fuchsia;
+            background-color: aquamarine;
+            box-shadow: 4px;
+            zoom: 102%;
+            margin-top: -2%;
+            box-shadow: 5px 6px 20px 1px rgba(0, 0, 0, 0.4);
+        }
+
+
+
+
+        /* Media Query for smaller screens */
+
+    @media screen and (max-width: 1300px) {
+        .grid-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-item{
+            width: 25vw;
+            height: auto;
+        }
+
+        .grid-item img{
+            margin-left: 20px;
+            width: 20vw;
+            height: 20vh;
+        }
+}
+
+
+    @media screen and (max-width: 850px) {
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-item{
+            width: 36vw;
+            height: auto;
+        }
+
+        .grid-item img{
+            margin-left: 20px;
+            width: 25vw;
+            height: 20vh;
+        }
+}
+
+@media screen and (max-width: 550px) {
+        .grid-container {
+            grid-template-columns: repeat(1, 1fr);
+            margin-top: 40%;
+
+        }
+
+        .grid-item{
+            width: 60vw;
+            height: auto;
+        }
+
+        .grid-item img{
+            margin-left: 20px;
+            width: 45vw;
+            height: 20vh;
+        }
+
+        .grid-item:hover{
+            width: 60vw;
+
+        }
+}
+    </style>
+    <title>Grid Layout Example</title>
+</head>
+<body>
+<!--nave bar div start-->
+    <div class="navbar">
+        <img src="/images/backgrounds/LOGO1.png" alt="Your Logo" id="orgimg">
+        <a href="" id="nava"> FARMER SHOP </a>
+        <a id="na" href="contact.html"><i class="fi fi-sr-phone-call"></i>Contact</a>
+        <a id="na" href="#home"><i class="fi fi-sr-shopping-cart"></i>Orders</a>
+        <a id="na" href=""><i class="fa fa-shopping-bag" aria-hidden="true"></i>Shop</a>
+        <a id="na" href="home.html"><i class="fi fi-sr-home"></i>Home</a>
+        <div class="search-container">
+            <form action="/search" method="get">
+                <input type="text" placeholder="Search..." name="search">
+            </form>
+        </div><!--search container calss end-->
+    </div><!--nave bar class end div-->
+
+    <div><marquee id="slid" behavior="slide" direction="left" scrollamount="100"><span>Enjoy a healthy</span> and delicious lifestyle</marquee></div>
+
+
+    <!--grid box container start-->
+    <div class="grid-container">
+
+        <div class="grid-item">
+            <a href="fruits.html"><img src="images/fruits/furitsall.jpg" id="furitsimage"></a>
+            <h2 id="furitsnames">Fruits</h2>
+            <p id="price">They are naturally good and contain vitamins and minerals that can help to keep you healthy</p>
+            <a href="fruits.html">View more items</a>
+        </div>
+
+        <div class="grid-item">
+            <a href="englishvegitables.html"><img src="images/eng vegtables/vegitablesall.jpg" id="furitsimage"></a>
+            <h2>English Vegetables</h2>
+            <p id="price"> Vegetables provide nutrients vital for the health and maintenance of the body.</p>
+            <a href="englishvegitables.html">View more items</a>
+        </div>
+
+        <div class="grid-item">
+        <a href="traditionalvegetables.html"><img src="images/tradisnal veg/tradisnal vegall.jpeg" id="furitsimage"></a>
+            <h2>Traditional Vegetables</h2>
+            <p id="price">Traditional vegetables are nutritious, easy to grow, and popular in certain regions.</p>
+            <a href="traditionalvegetables.html">View more items</a>
+        </div>
+
+        <div class="grid-item">
+        <a href="dailyneed.html"><img src="images/daily need/dailyneedall.jpg" id="furitsimage"></a>
+            <h2>Daily Needs</h2>
+            <p id="price">Curry leaves and mint are used to spice up food in almost every Indian kitchen</p>
+            <a href="dailyneed.html">View more items</a>
+        </div>
+
+        <div class="grid-item">
+        <a href="dryfruitsandnut.html"><img src="images/dry nuts/dry furitsall.jpeg" id="furitsimage"></a>
+            <h2>Dry Furits & Nuts</h2>
+            <p id="price">Dry fruits and nuts are a good source of essential vitamins, minerals, proteins, and healthy fats</p>
+            <a href="dryfruitsandnut.html">View more items</a>
+        </div>
+
+        <div class="grid-item">
+        <a href="smallgrains.html"><img src="images/grocering provi/siruthaniyamall.jpg" id="furitsimage"></a>
+            <h2>Small Grains</h2>
+            <p id="price">small grains can produce profitable yields of grain for the cash market or farm feeding.</p>
+            <a href="smallgrains.html">View more items</a>
+        </div><!--grid item end-->
+
+
+        <div class="grid-item">
+        <a href="oilandgee.html"><img src="images/oil ghee/oil ghee.jpeg" id="furitsimage"></a>
+            <h2>Oil & Ghee</h2>
+            <p id="price">Oil and ghee are both used in cooking to add flavor and remove the rawness of dishes</p>
+            <a href="oilandgee.html">View more items</a>
+        </div><!--grid item end-->
+
+    </div><!--grid container class div end-->
+
+
+
+<!--search bar script start-->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.querySelector('input[name="search"]');
+        const gridItems = document.querySelectorAll('.grid-item');
+
+        searchInput.addEventListener('input', function () {
+            const searchTerm = searchInput.value.toLowerCase();
+
+            gridItems.forEach(function (item) {
+                const fruitName = item.querySelector('h2').innerText.toLowerCase();
+
+                if (fruitName.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+
+
+</body>
+</html>
+

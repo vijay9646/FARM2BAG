@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FARMER SHOP</title>
+    <link rel="icon" type="image/x-icon" href="images/backgrounds/LOGO1.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--fa fa i con cdn link-->
+
+    <style>
+        /* ... (existing styles) */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(images/backgrounds/backs6.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            overflow-y: scroll;
+            scrollbar-width: thin; 
+            scrollbar-color: transparent transparent; 
+            -ms-overflow-style: none;
+        }
+
+        body::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: transparent;
+        }
+
+
+
+        .navbar {
+            background-color: #fac104;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            float: right;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border: 2px;
+            
+        }
+
+        #na{
+            margin-top: 8px;
+            font-size: 18PX;
+            font-weight: 600;
+            margin-right: 10PX;
+        }
+
+        #na i{
+            margin-right: 8px;
+        }
+
+        .navbar a:hover {
+            background-color: #2ef71c;
+            color: black;
+            border-radius: 15px;
+
+        }
+
+        .search-container {
+            float: center;
+        }
+
+        .search-container input{
+            width: 30%;
+            margin-left: 8%;
+            border-radius: 8px;
+        }
+
+        input[type=text] {
+            padding: 10px;
+            margin-top: 10px;
+            margin-right: 16px;
+            font-size: 17px;
+            border: none;
+            background-color: bisque;
+        }
+
+        #but{
+            padding: 11px;
+            width: 100px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            background-color: bisque;
+            
+        }
+
+        #but:hover{
+            background-color: springgreen;
+        }
+
+    /* search bar css start*/
+    @media screen and (max-width: 600px) {
+        .navbar a, .search-container {
+            float: none;
+            display: block;
+            text-align: left;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .search-container {
+            margin-top: 8px;
+            margin-right: 0;
+        }
+    }
+
+        #orgimg {
+            float: left;
+            width: 4%;
+            height: 4%;
+            border-radius: 50%;
+        }
+
+        #nava {
+            color: rgb(9, 84, 9);
+            font-weight: 900;
+            font-size: 25px;
+            float: left;
+            margin-left: 10px; /* Adjust the margin as needed */
+        }
+
+        #slid{
+            margin-top: 5%;
+        }
+
+        #slids{
+            margin-top: 22%;
+        }
+
+        #slid{
+          font-size: 40px;
+          font-weight: 700;
+          margin-left: 38%;
+          color: white;
+        }
+
+        #slid span{
+          font-size: 50px;
+          color: white;
+          margin-left: 8%;
+        }
+
+        #slids{
+          font-size: 40px;
+          font-weight: 700;
+          margin-right: 19%;
+          color: white;
+        }
+
+        #slids span{
+          font-size: 45px;
+          color: white;
+          margin-left: 27%;
+        }
+
+        /*content container starts*/
+
+        .content-container1 {
+            grid-column: 2 / span 1; 
+            margin-top: 20%;
+            display: grid;
+            grid-template-columns: 1fr 2fr; 
+            gap: 20px;
+            width: 100vw;
+            height: 65vh;
+
+        }
+
+        .left-side1{
+            margin-left: 5%;
+        }
+
+        .left-side1 img {
+            width: 50vw;
+            height: 57vh; 
+            border-radius: 8px;
+        }
+
+        .right-side1 {
+            width: 37vw;
+            padding: 20px;
+            height: 52vh;
+            margin-left: 9%;
+
+        }
+
+        .right-side1 h1{
+            font-size: 40px;
+        }
+
+        .right-side1 p {
+            text-wrap: wrap;
+            font-size: 17px;
+            margin-left: 5%;
+        }
+
+        .right-side1 p img{
+            width: 20px;
+            height: 20px;
+            margin-right: 3%;
+        }
+
+        .right-side1 button{
+            margin-top: 2%;
+            padding: 20px;
+            width: 30%;
+            border-radius: 30px;
+            background-color: #2ef71c;
+            border-color: #2ef71c;
+        }
+
+/*three grid container start*/
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 80px;
+            background-color: aliceblue;
+        }
+
+        .fullwidth{
+            width: 100vw;
+            height: 25vh;
+            text-align: center;
+            background-color: aliceblue;
+
+        }
+
+        .fullwidth img{
+            width: 10%;
+        }
+
+        .fullwidth span{
+            font-size: 45px;
+            font-weight: 700;
+            line-height: 1.8;
+        }
+
+        .grid-item {
+            background-color: white;
+            border: 1px solid white;
+            padding: 40px;
+            text-align: center;
+
+        }
+
+        #save{
+            width: 70px;
+            height: 70px;
+        }
+
+    .content-container2 {
+            grid-column: 2 / span 1; 
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            background-image: url(images/backgrounds/Agriform.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 50vh;
+        }
+
+        .left-side2 {
+            width: 100%; 
+            height: 30vh;
+            border-radius: 8px; 
+            color: white;
+            padding-left: 90px;
+        }
+
+        .left-side2 h1{
+            font-size: 45px;
+            margin-top: 15%;
+        }
+
+        .right-side2 {
+            text-align: center;
+            width: 100%;
+            height: 30vh;
+
+        }
+
+        .right-side2 button{
+            padding: 20px;
+            width: 180px;
+            margin-top: 15%;
+            background-color: #f36e31;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            color: white;
+            font-size: 22px;
+        }
+
+        .grid-container2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 30px;
+            background-color: aliceblue;
+        }
+
+        .fullwidth2{
+            width: 100vw;
+            height: 28vh;
+            text-align: center;
+            background-color: aliceblue;
+
+        }
+
+        .fullwidth2 img{
+            width: 10%;
+        }
+
+        .fullwidth2 span{
+            font-size: 45px;
+            font-weight: 700;
+            line-height: 2;
+        }
+
+        .grid-item2 {
+            background-color: white;
+            border: 1px solid white;
+            text-align: center;
+
+        }
+
+        .grid-item2 h2, p{
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        #saves{
+            width: 450px;
+            height: 300px;
+        }
+
+        .grid-item2 p i{
+            color: #2ef71c;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        /*footer tag css start*/
+
+        .foot{
+            width: 100vw;
+            height: 48vh;
+            background-color: black;
+            color: white;
+        }
+
+        .grid-container4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 20px;
+            background-color: black;
+            height: 33vh;
+        }
+
+        .grid-item4 {
+            background-color: black;
+            padding: 20px;
+            height: 30vh;
+
+        }
+
+        #adressclass{
+            padding-left: 90px;
+        }
+
+        #fo{
+            color: white;
+            padding-left: 0;
+            padding-right: 0;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .grid-item4 h1{
+            color: #2ef71c;
+        }
+
+        .grid-item4 h1 span{
+            color: #f36e31;
+        }
+
+        .grid-item4 h2{
+            color: white;
+        }
+
+        #weblink,i{
+            color: white;
+        }
+
+        #ad{
+            text-decoration: none;
+            line-height: 2;
+            color: white;
+        }
+
+        .grid-item4 i{
+            margin-right: 3%;
+        }
+
+        #orgimgs{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        #companyname{
+            margin-right: -20px;
+            float: right;
+        }
+
+        /*last sign up from css*/
+
+        #input-label {
+            display: flex;
+            align-items: center;
+            
+        }
+
+        #user-input {
+            height: 35px;
+            width: 250px;
+            border: 2px solid #07f503;
+            border-radius: 4px;
+        }
+
+        #signup-button {
+            text-wrap: nowrap;
+            padding:12px 30px;
+            background-color: #4caf50;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-size: 13px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+  </style>
+
+</head>
+<body>
+<div class="navbar">
+    <img src="/images/backgrounds/LOGO1.png" alt="Your Logo" id="orgimg">
+    <a href="" id="nava"> FARMER SHOP </a>
+    <a id="na" href="contact.html"><i class="fa fa-phone" aria-hidden="true"></i>Contact</a>
+    <a id="na" href="#home"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Orders</a>
+    <a id="na" href="shop.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Shop</a>
+    <a id="na" href="#"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+    <div class="search-container">
+        <form action="/search" method="get">
+            <input type="text" placeholder="Search..." name="search">
+            <button id="but" type="submit">Search</button>
+        </form>
+    </div><!--search container class end-->
+</div><!--navebar class end-->
+<marquee id="slid" behavior="slide" direction="left" scrollamount="100"> <span>Welcome To</span> <br> Farmer Organics Store</marquee>
+<marquee id="slids" behavior="slide" direction="right" scrollamount="100"> <span>INDIANS</span> <br>TRADITIONAL QUALITY ORGANICS PRODUCT</marquee>
+
+<div class="content-container1">
+    <div class="left-side1">
+        <img src="images/backgrounds/family.jpg" alt="Left Side Image">
+    </div><!--left side class end-->
+    <div class="right-side1">
+        <h1>Best Organic Fruits And <br> Vegetables</h1>
+        <p>Organic fruits and vegetables are grown without harmful synthetic chemicals and pesticides. They contain higher levels of micronutrients than traditionally grown crops and processed foods.</p>
+        <p><img src="images/backgrounds/check-mark.png" alt="">Organic produce is more sustainable</p>
+        <p><img src="images/backgrounds/check-mark.png" alt="">It is healthier for you and more nutrient dense</p>
+        <p><img src="images/backgrounds/check-mark.png" alt="">It supports local farmers directly</p>
+        <button>Read More</button>
+    </div><!--right side class end-->
+</div><!--content container end-->
+
+<div class="fullwidth">
+    <img src="images/backgrounds/minus.png" alt="">
+    <br>
+    <img src="images/backgrounds/substract.png" alt="">   
+    <p><span>Our Features</span><br>Agriculture is the practice of growing crops and raising animals to  <br>provide food and materials for people.</p>
+</div><!--full width class end-->
+
+<div class="grid-container">
+    <div class="grid-item">
+        <img id="save" src="images/backgrounds/plant-leaf.png" alt="">
+        <h2>Natural Process</h2>
+        <p>This allows the food to be preserved for more time and remain safe to eat.</p>
+    </div>
+    <div class="grid-item">
+        <img id="save" src="images/backgrounds/save-nature.png" alt="">
+        <h2>Organic Products</h2>
+        <p>Adopt nature-positive production practices: This can help build food systems that protect and conserve nature.</p>
+    </div>
+    <div class="grid-item">
+        <img id="save" src="images/backgrounds/lab.png" alt="">
+        <h2>Biologically Safe</h2>
+        <p>Biological hazards include bacteria, viruses, parasites, prions, biotoxins. </p>
+    </div>
+</div><!--grid container end-->
+
+<div class="content-container2">
+    <div class="left-side2">
+        <h1>Vist Our Form</h1>
+        <p>Agriculture is the cultivation of plants, animals, and some other organisms, such as fungi, for the production of food, fibre, fuel, and medicines used by society.</p>
+    </div>
+    <div class="right-side2">
+        <button>Vist</button>
+    </div>
+</div><!--content container end-->
+
+<div class="fullwidth2">
+    <img src="images/backgrounds/minus.png" alt="">
+    <br>
+    <img src="images/backgrounds/substract.png" alt="">   
+    <p><span>Latest Blog</span><br>Rice crops are those that grow mainly during the summer <br> and are sown at the beginning of the rainy season.</p>
+</div><!--full width class end-->
+
+<div class="grid-container2">
+    <div class="grid-item2">
+        <img id="saves" src="images/backgrounds/agriall1.jpg" alt="">
+        <h2>Stage 1</h2>
+        <p>First the land should be plowed and cleaned</p>
+        <hr>
+        <p>Last update<i class="fa fa-calendar-check-o" aria-hidden="true"></i>01-jan-2024</p>
+    </div>
+    <div class="grid-item2">
+        <img id="saves" src="images/backgrounds/agriall2.jpg" alt="">
+        <h2>Stage 2</h2>
+        <p>Higher yield and higher profitability</p>
+        <hr>
+        <p>Last update <i class="fa fa-calendar-check-o" aria-hidden="true"></i>01-jan-2024</p>
+    </div>
+    <div class="grid-item2">
+        <img id="saves" src="images/backgrounds/agriall3.jpg" alt="">
+        <h2>Stage 3</h2>
+        <p>Production if quality vegetables</p>
+        <hr>
+        <p>Last update <i class="fa fa-calendar-check-o" aria-hidden="true"></i>01-jan-2024</p>
+    </div>
+</div><!--grid container end-->
+
+<footer class="foot">
+    <div class="grid-container4">
+        <div class="grid-item4">
+            <img src="/images/backgrounds/LOGO1.png" alt="Your Logo" id="orgimgs">
+            <h1 id="companyname">FA<span>RM</span>ER S<span>HO</span>P</h1>
+            <p id="fo">Get your fruits, vegetables and herbsbr <br> at the  best Farmer Shop in <br>Coimbatore</p>
+            <p id="fo">If the Farmer is rich, then so is the Nation.</p>
+            <a href="" id="weblink"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+            <a href="" id="weblink"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+            <a href="" id="weblink"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="" id="weblink"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+            <a href="" id="weblink"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+        </div>
+        <div class="grid-item4" id="adressclass">
+            <h2>Address</h2>
+            <a href="" id="ad"><i class="fa fa-globe" aria-hidden="true"></i>34/2, Hoops, Coimbatore, India</a><br>
+            <a href="" id="ad"><i class="fa fa-phone" aria-hidden="true"></i>+91 9875684628</a><br>
+            <a href="" id="ad"><i class="fa fa-envelope" aria-hidden="true"></i>formershop@gmail.com</a>
+        </div>
+        <div class="grid-item4" id="adressclass">
+            <h2>Quick Links</h2>
+            <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>About Us</a><br>
+            <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Contact Us</a><br>
+            <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Our Services</a><br>
+            <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Terms & Condition</a><br>
+            <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Support</a>
+        </div>
+        <div class="grid-item4">
+            <h2>News Letter</h2>
+            <p id="fo">Plese sing in and and enter your details</p>
+            <form id="signup-form">
+                <label id="input-label">
+                  <input type="email" id="user-input" placeholder="Enter your email">
+                  <button type="submit" id="signup-button">Sign Up</button>
+                </label>
+              </form>
+        </div>
+    </div>
+    <hr style="color: white;">
+    <p><span style="float: left; font-size: 25px;">From Shop</span><span style="float: right;"> Copyright 1999-2023 by Refsnes Data. All Rights Reserved.</span></p><br><hr style="margin-top: 20px;">
+</footer>
+
+</body>
+</html>
+
+
+

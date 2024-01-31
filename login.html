@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Display Data</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url(images/backgrounds/back1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .login-container {
+            text-align: center;
+            width: 350px;
+            height: 320px;
+            padding-left: 40px;
+            padding-bottom: 40px;
+            padding-right: 40px;
+            position: relative;
+        }
+
+        #fulldiv {
+            text-align: center;
+        }
+
+        #logoimg {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-family: 'Ephesis', cursive;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 800;
+        }
+
+        #form {
+            text-align: center;
+            line-height: 2;
+        }
+
+        label[for="email"],
+        label[for="password"] {
+            font-weight: 400;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            font-weight: 700;
+            width: 100%;
+            padding: 10px;
+            color: #fff;
+            background-color: #007BFF;
+            border-radius: 5px;
+            border: none;
+        }
+
+        label[for='remember'] {
+            cursor: pointer;
+        }
+
+        #anger {
+            margin-top: 5%;
+            color: rgb(30, 1, 252);
+            text-decoration: none;
+            float: left;
+        }
+
+        #angers {
+            margin-top: 5%;
+            color: rgb(30, 1, 252);
+            text-decoration: none;
+            float: right;
+        }
+
+        #emailError,
+        #passwordError {
+            padding: 0;
+            margin-top: -2%;
+            color: red;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="fulldiv">
+        <img id="logoimg" src="images/backgrounds/LOGO1.png" alt="">
+        <div class="login-container">
+            <h2>Welcome Back</h2>
+            <form action="" id="form">
+                <label for="email">Email</label>
+                <input type="email" placeholder="Email Address" id="email" name="email" required>
+                <p id="emailError" class="error-message"></p>
+
+                <label for="password">Password</label>
+                <input type="password" placeholder="Password" id="password" name="password" required>
+                <p id="passwordError" class="error-message"></p>
+
+                <button type="button" onclick="login()">Login</button>
+            </form>
+            <a id="anger" href="#">Forgot Password?</a>
+            <a id="angers" href="signup.html">Sign Up</a>
+        </div><!--login-container class div end-->
+    </div><!--fulldiv class end-->
+
+    <ol></ol>
+
+    <script>
+        // Function to check if the email is valid
+        function isValidEmail(email) {
+            // Basic email validation using a regular expression
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Add event listeners for input validation
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+
+        emailInput.addEventListener('input', validateEmail);
+        passwordInput.addEventListener('input', validatePassword);
+
+        function validateEmail() {
+            const emailError = document.getElementById('emailError');
+            const emailValue = emailInput.value.trim();
+
+            if (emailValue === '') {
+                emailError.textContent = 'Email is required.';
+            } else if (!isValidEmail(emailValue)) {
+                emailError.textContent = 'Please enter a valid email address.';
+            } else {
+                emailError.textContent = '';
+            }
+        }
+
+        function validatePassword() {
+            const passwordError = document.getElementById('passwordError');
+            const passwordValue = passwordInput.value.trim();
+
+            if (passwordValue === '') {
+                passwordError.textContent = 'Password is required.';
+            } else {
+                passwordError.textContent = '';
+            }
+        }
+
+        function login() {
+            validateEmail();
+            validatePassword();
+
+            const emailValue = emailInput.value.trim();
+            const passwordValue = passwordInput.value.trim();
+
+            if (isValidEmail(emailValue) && passwordValue !== '') {
+                // Proceed with the login logic
+                fetch('https://api-generator.retool.com/DzjhIh/file')
+                    .then(res => res.json())
+                    .then(data => {
+                        document.querySelector('ol').innerHTML = ''; // Clear existing data
+
+                        let loginSuccess = false;
+
+                        data.forEach(user => {
+                            const markup = `<div class="userContainer">
+                                <li>ID: ${user.id}</li>
+                                <li>Username: ${user.username}</li>
+                                <li>Email: ${user.email}</li>
+                                <li>Password: ${user.password}</li>
+                            </div>`;
+
+                            document.querySelector('ol').insertAdjacentHTML('beforeend', markup);
+
+                            // Check if the fetched values match the input values
+                            if (user.email === emailValue && user.password === passwordValue) {
+                                loginSuccess = true;
+                            }
+                        });
+
+                        if (loginSuccess) {
+                            console.log('Login Success!');
+                            window.location.href = "home.html";
+                        } else {
+                            console.log('Login Failed. Check your credentials.');
+                        }
+                    })
+                    .catch(error => console.log(error));
+            }
+        }
+    </script>
+</body>
+
+</html>

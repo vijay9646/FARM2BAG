@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+                /*footer tag css start*/
+
+                .foot{
+            width: 100vw;
+            height: 48vh;
+            background-color: black;
+            color: white;
+        }
+
+        .grid-container4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 20px;
+            background-color: black;
+            height: 33vh;
+        }
+
+        .grid-item4 {
+            background-color: black;
+            padding: 20px;
+            height: 30vh;
+
+        }
+
+        #adressclass{
+            padding-left: 90px;
+        }
+
+        #fo{
+            color: white;
+            padding-left: 0;
+            padding-right: 0;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .grid-item4 h1{
+            color: #2ef71c;
+        }
+
+        .grid-item4 h1 span{
+            color: #f36e31;
+        }
+
+        .grid-item4 h2{
+            color: white;
+        }
+
+        #weblink,i{
+            color: white;
+        }
+
+        #ad{
+            text-decoration: none;
+            line-height: 2;
+            color: white;
+        }
+
+        .grid-item4 i{
+            margin-right: 3%;
+        }
+
+        #orgimgs{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        #companyname{
+            margin-right: -20px;
+            float: right;
+        }
+
+        /*last sign up from css*/
+
+        #input-label {
+            display: flex;
+            align-items: center;
+            
+        }
+
+        #user-input {
+            height: 35px;
+            width: 250px;
+            border: 2px solid #07f503;
+            border-radius: 4px;
+        }
+
+        #signup-button {
+            text-wrap: nowrap;
+            padding:12px 30px;
+            background-color: #4caf50;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-size: 13px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <footer class="foot">
+        <div class="grid-container4">
+            <div class="grid-item4">
+                <img src="/images/backgrounds/LOGO1.png" alt="Your Logo" id="orgimgs">
+                <h1 id="companyname">FA<span>RM</span>ER S<span>HO</span>P</h1>
+                <p id="fo">Get your fruits, vegetables and herbsbr <br> at the  best Farmer Shop in <br>Coimbatore</p>
+                <p id="fo">If the Farmer is rich, then so is the Nation.</p>
+                <a href="" id="weblink"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                <a href="" id="weblink"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a href="" id="weblink"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="" id="weblink"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                <a href="" id="weblink"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="grid-item4" id="adressclass">
+                <h2>Address</h2>
+                <a href="" id="ad"><i class="fa fa-globe" aria-hidden="true"></i>34/2, Hoops, Coimbatore, India</a><br>
+                <a href="" id="ad"><i class="fa fa-phone" aria-hidden="true"></i>+91 9875684628</a><br>
+                <a href="" id="ad"><i class="fa fa-envelope" aria-hidden="true"></i>formershop@gmail.com</a>
+            </div>
+            <div class="grid-item4" id="adressclass">
+                <h2>Quick Links</h2>
+                <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>About Us</a><br>
+                <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Contact Us</a><br>
+                <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Our Services</a><br>
+                <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Terms & Condition</a><br>
+                <a href="" id="ad"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Support</a>
+            </div>
+            <div class="grid-item4">
+                <h2>News Letter</h2>
+                <p id="fo">Plese sing in and and enter your details</p>
+                <form id="signup-form">
+                    <label id="input-label">
+                      <input type="email" id="user-input" placeholder="Enter your email">
+                      <button type="submit" id="signup-button">Sign Up</button>
+                    </label>
+                  </form>
+            </div>
+        </div>
+        <hr style="color: white;">
+        <p><span style="float: left; font-size: 25px;">From Shop</span><span style="float: right;"> Copyright 1999-2023 by Refsnes Data. All Rights Reserved.</span></p><br><hr style="margin-top: 20px;">
+    </footer>
+    
+    
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Hover Video</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+      background-color: #f0f0f0;
+    }
+
+    body::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+
+
+
+    .navbar {
+      background-color: #fac104;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      float: right;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      border: 2px;
+
+    }
+
+    #na {
+      margin-top: 8px;
+      font-size: 18PX;
+      font-weight: 600;
+      margin-right: 10PX;
+    }
+
+    .navbar a:hover {
+      background-color: #2ef71c;
+      color: black;
+      border-radius: 15px;
+
+    }
+
+    .search-container {
+      float: center;
+    }
+
+    .search-container input {
+      width: 40%;
+      margin-left: 8%;
+      border-radius: 8px;
+    }
+
+    input[type=text] {
+      padding: 10px;
+      margin-top: 10px;
+      margin-right: 16px;
+      font-size: 17px;
+      border: none;
+      background-color: bisque;
+    }
+
+    #but {
+      padding: 11px;
+      width: 100px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      background-color: bisque;
+
+    }
+
+    #but:hover {
+      background-color: springgreen;
+    }
+
+    /* search bar css start*/
+    @media screen and (max-width: 600px) {
+
+      .navbar a,
+      .search-container {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .search-container {
+        margin-top: 8px;
+        margin-right: 0;
+      }
+    }
+
+    #orgimg {
+      float: left;
+      width: 4%;
+      height: 4%;
+      border-radius: 50%;
+    }
+
+    #nava {
+      color: rgb(9, 84, 9);
+      font-weight: 900;
+      font-size: 25px;
+      float: left;
+      margin-left: 10px;
+      /* Adjust the margin as needed */
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /* Adjust the number of columns as needed */
+      gap: 20px;
+      align-items: center;
+      padding-left: 3.6%;
+      margin-top: 5%;
+    }
+
+    .grid-item {
+      position: relative;
+      /* Change this line */
+      overflow: hidden;
+      border: 2px solid rgb(148, 138, 138);
+      border-radius: 5%;
+
+    }
+
+    .grid-item {
+      width: 30vw;
+      height: 40vh;
+    }
+
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 80%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: end;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      z-index: 1;
+      /* Add this line */
+      padding: 40px;
+    }
+
+
+    .video-overlay:hover {
+      opacity: 1;
+    }
+
+    .video-overlay h2 {
+      color: white;
+      font-size: 35px;
+      margin-bottom: 10%;
+      background-color: black;
+    }
+
+    .video-overlay p {
+      color: white;
+      font-size: 20px;
+      margin-bottom: 30%;
+      background-color: black;
+    }
+
+    .grid-item:hover .video-overlay {
+      opacity: 1;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <img src="/images/backgrounds/LOGO1.png" alt="Your Logo" id="orgimg">
+    <a href="" id="nava"> FARMER SHOP </a>
+    <a id="na" href="#home">Contact</a>
+    <a id="na" href="#home">Orders</a>
+    <a id="na" href="#about">Shop</a>
+    <a id="na" href="#services">Home</a>
+    <div class="search-container">
+      <form action="/search" method="get">
+        <input type="text" placeholder="Search..." name="search">
+        <button id="but" type="submit">Search</button>
+      </form>
+    </div><!--search container class end-->
+  </div><!--navebar class end-->
+
+
+  <div class="grid-container">
+    <div class="grid-item" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+      <video src="videos/apple.mp4" loop muted></video>
+      <div class="video-overlay">
+        <p>healthy digestion, brain health, and weight management</p>
+      </div>
+      <div class="video-overlay">
+        <h2>Price : ₹ 50</h2>
+      </div>
+    </div>
+
+    <div class="grid-item" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+      <video src="videos/banana.mp4" loop muted></video>
+      <div class="video-overlay">
+        <p>healthy digestion, brain health, and weight management</p>
+      </div>
+      <div class="video-overlay">
+        <h2>Price : ₹ 50</h2>
+      </div>
+    </div>
+
+    <div class="grid-item" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+      <video src="videos/grapes.mp4" loop muted></video>
+      <div class="video-overlay">
+        <p>healthy digestion, brain health, and weight management</p>
+      </div>
+      <div class="video-overlay">
+        <h2>Price : ₹ 50</h2>
+      </div>
+    </div>
+
+    <div class="grid-item" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+      <video src="videos/lemon.mp4" loop muted></video>
+      <div class="video-overlay">
+        <p>healthy digestion, brain health, and weight management</p>
+      </div>
+      <div class="video-overlay">
+        <h2>Price : ₹ 50</h2>
+      </div>
+    </div>
+
+    <div class="grid-item" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+      <video src="videos/orenge.mp4" loop muted></video>
+      <div class="video-overlay">
+        <p>healthy digestion, brain health, and weight management</p>
+      </div>
+      <div class="video-overlay">
+        <h2>Price : ₹ 50</h2>
+      </div>
+    </div>
+
+    <script>
+      function playVideo(element) {
+        const video = element.querySelector('video');
+        video.play();
+      }
+
+      function pauseVideo(element) {
+        const video = element.querySelector('video');
+        video.pause();
+      }
+
+    </script>
+
+</body>
+
+</html>

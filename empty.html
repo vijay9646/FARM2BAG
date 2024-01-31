@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            background-color: aqua;
+        }
+
+        .grid-item {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+    <title>Grid Layout Example</title>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <h2>Box 3</h2>
+            <p>Content for box 1 goes here.</p>
+        </div>
+        <div class="grid-item">
+            <h2>Box 15</h2>
+            <p>Content for box 2 goes here.</p>
+        </div>
+        <div class="grid-item">
+            <h2>Box 1</h2>
+            <p>Content for box 3 goes here.</p>
+        </div>
+    </div>
+
+</body>
+</html>
